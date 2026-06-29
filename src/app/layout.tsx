@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
-
-const notoJP = Noto_Sans_JP({
-  variable: "--font-noto-jp",
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-});
 
 export const metadata: Metadata = {
   title: "浜名湖うなぎ専門店 浜名湖うなぎの里",
   description:
-    "※架空のデモサイト※ Next.js 15 で作成された架空のデモサイトです。記載の店舗名・住所・電話番号・メールアドレス等はすべて架空の情報であり、実在するものではありません。",
+    "※架空のデモサイト※ Next.js 16 で作成された架空のデモサイトです。記載の店舗名・住所・電話番号・メールアドレス等はすべて架空の情報であり、実在するものではありません。",
 };
 
 export default function RootLayout({
@@ -21,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoJP.variable} h-full antialiased`}>
+    <html lang="ja" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-stone-50 text-stone-800">
         <FictionalBanner />
         <Header />
