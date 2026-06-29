@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 浜名湖うなぎの里（架空のデモサイト）
 
-## Getting Started
+Next.js 15 で構築した浜名湖うなぎ専門店を題材にした**架空のデモサイト**です。
+店舗名・住所・電話番号・メールアドレス・商品・価格はすべて架空であり、実在するものではありません。
 
-First, run the development server:
+> ⚠️ このリポジトリはデモ・学習目的の架空サイトです。実際の店舗・サービスではありません。
+
+## レポジトリ概要
+
+| 項目 | 内容 |
+| --- | --- |
+| フレームワーク | Next.js 15 (App Router) |
+| 言語 | TypeScript |
+| スタイリング | Tailwind CSS v4 |
+| フォント | Noto Sans JP |
+| デプロイ想定 | Kilo Deploy / Vercel 等 |
+
+### ページ構成
+
+| パス | ページ | 内容 |
+| --- | --- | --- |
+| `/` | ホーム | ヒーロー・こだわり3点・看板メニュー・お知らせ・CTA |
+| `/about` | こだわり | 創業明治23年・浜名湖の水・炭火・秘伝のたれ |
+| `/products` | 商品一覧 | うな重・特上うな重・うな丼・う巻き・ひつまぶし・うなぎパイ |
+| `/contact` | お問い合わせ | 架空の問い合わせフォーム（送信不可・保存されない） |
+
+### 架空サイトである旨の明示箇所
+
+- 全ページ最上部の固定バナー
+- 各ページヒーロー内の「※ 架空のデモサイト」バッジ
+- フッターの注意書きボックス
+- 各ページの `metadata.description`
+- お問い合わせフォーム（送信不可である旨を明記）
+
+## セットアップ
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) を開いてください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ビルド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## 更新履歴
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| 日付 | 内容 |
+| --- | --- |
+| 2026-06-29 | 初回リリース。Next.js 15 アプリを scaffold、ホーム・こだわり・商品一覧・お問い合わせの4ページを作成。架空サイトである旨を全ページに明示 |
